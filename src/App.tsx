@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Router from './components/Router'
 import Header from "components/Header";
 
-import { app } from 'firebaseApp';
+import { app, db } from 'firebaseApp';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { ToastContainer } from "react-toastify";
 import Loader from 'components/Loader';

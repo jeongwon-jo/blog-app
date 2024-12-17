@@ -1,5 +1,6 @@
 import { initializeApp, FirebaseApp, getApp } from "firebase/app";
 import "firebase/auth"
+import { getFirestore } from "firebase/firestore";
 
 // 지역변수로 app이라는 변수 선언
 export let app: FirebaseApp;
@@ -22,6 +23,4 @@ try {
   app = initializeApp(firebaseConfig, "app")
 }
 
-// const firebase = initializeApp(firebaseConfig);
-
-// export default firebase;
+export const db = getFirestore(app);
