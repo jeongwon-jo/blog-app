@@ -4,8 +4,7 @@ import carouselImage02 from "../asset/images/carousel_img_02.jpg";
 import carouselImage03 from "../asset/images/carousel_img_03.jpg";
 export default function Carousel() {
   const [activeImage, setActiveImage] = useState(1)
-  console.log(activeImage);
-  
+
   return (
 		<>
 			<div>
