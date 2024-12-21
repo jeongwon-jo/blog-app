@@ -236,6 +236,12 @@ header {
   color: black;
 }
 
+.post__no-post {
+  padding: 24px;
+  text-align: center;
+  color: gray;
+  margin-top: 24px;
+}
 /* post detail */
 .post__detail .post__title {
   font-size: 36px;
@@ -255,6 +261,11 @@ header {
 
 .post__detail .post__text {
   padding: 20px 0;
+}
+
+.post__text--pre-wrap {
+  /* 줄바꿈은 되지만 영역밖은 벗어나지않는다. */
+  white-space: pre-wrap;
 }
 
 /* profile */
