@@ -218,10 +218,23 @@ header {
 
 .post__utils-box {
   display: flex;
+  align-items: center;
   gap: 8px;
   flex-direction: row-reverse;
   font-size: 14px;
   color: gray;
+}
+
+.post__category {
+  color: gray;
+  border: 1px solid lightgray;
+  background-color: #f2f2f2;
+  padding: 2px 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 .post__delete,
@@ -527,6 +540,16 @@ input:checked + .carousel__slide-container .nav label {
 .form__error {
   font-size: 14px;
   color: red;
+}
+
+.form select {
+  max-width: 240px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
 }
 
 /* loader */
