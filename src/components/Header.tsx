@@ -1,10 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../asset/images/logo.png";
+import LogoWhite from "../asset/images/logo_white.png";
 import { BsSun, BsMoonFill } from "react-icons/bs" 
 import { IoHomeOutline } from "react-icons/io5";
-import { CgNotes } from "react-icons/cg";
-import { LuPencilLine } from "react-icons/lu";
-import { FaRegUserCircle } from "react-icons/fa";
+import { PiUserCircleLight } from "react-icons/pi"
+import { LiaStickyNote } from "react-icons/lia";
+import { RxPencil2 } from "react-icons/rx";
 import { useContext } from "react";
 import ThemeContext from "context/ThemeContext";
 
@@ -16,7 +17,7 @@ export default function Header() {
 		<header>
 			<div className="header__inner">
 				<Link to="/" className="header__logo">
-					<img src={Logo} alt="로고" />
+					<img src={context.theme == "light" ? Logo : LogoWhite} alt="로고" />
 				</Link>
 				<div className="header__menu">
 					<NavLink
@@ -32,7 +33,7 @@ export default function Header() {
 							isActive ? "link active" : "link"
 						}
 					>
-						<CgNotes />
+						<LiaStickyNote />
 					</NavLink>
 					<div className="new">
 						<NavLink
@@ -41,7 +42,7 @@ export default function Header() {
 								isActive ? "link active" : "link"
 							}
 						>
-							<LuPencilLine />
+							<RxPencil2 />
 						</NavLink>
 					</div>
 				</div>
@@ -53,7 +54,7 @@ export default function Header() {
 								isActive ? "link active" : "link"
 							}
 						>
-							<FaRegUserCircle />
+							<PiUserCircleLight />
 						</NavLink>
 					</div>
 					<div className="header__theme">
