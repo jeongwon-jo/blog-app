@@ -30,7 +30,7 @@ export default function Header() {
 					<NavLink
 						to="/posts"
 						className={({ isActive }) =>
-							isActive ? "link active" : "link"
+							isActive ? "link link__post active" : "link link__post"
 						}
 					>
 						<LiaStickyNote />
