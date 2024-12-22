@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import Router from './components/Router'
 import Header from "components/Header";
 
@@ -6,8 +6,10 @@ import { app } from 'firebaseApp';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { ToastContainer } from "react-toastify";
 import Loader from 'components/Loader';
+import ThemeContext from 'context/ThemeContext';
 
 function App() {
+	const context = useContext(ThemeContext)
 	// auth 정보를 불러오는 함수 (app)이 꼭 들어가야함.
 	const auth = getAuth(app);
 	// auth를 체크하기 전에 (initialize 전) loader 띄워주는 용도
@@ -31,7 +33,7 @@ function App() {
 	}, [auth]);
 
 	return (
-		<>
+		<div className={context.theme === "light" ? "white" : "dark"}>
 			{init ? 
 			<div className="wrap">
 				<Header />
@@ -44,7 +46,7 @@ function App() {
 			</div> :
 			<Loader />
 			}
-		</>
+		</div>
 	);
 }
 
