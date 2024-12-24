@@ -15,16 +15,24 @@ type TabType = "all" | "my";
 export type CategoryType = 'Frontend' | "Backend" | "Web" | "Native";
 export const CATEGORIES: CategoryType[] = ["Frontend", "Backend", "Web", "Native"]
 
+export interface CommentsInterface {
+	comment: string;
+	uid: string;
+	email: string;
+	createdAt: string;
+}
+
 export interface PostProps {
-	id: string,
-	title: string,
-	email: string,
-	summary: string,
-	content: string,
-	createdAt: string,
-	updatedAt: string,
-	uid: string,
-	category: CategoryType
+	id: string;
+	title: string;
+	email: string;
+	summary: string;
+	content: string;
+	createdAt: string;
+	updatedAt: string;
+	uid: string;
+	category: CategoryType;
+	comments?: CommentsInterface[];
 }
 
 export default function PostList({ hasNavigation = true, defaultTab = "all" }:PostListProps) {
